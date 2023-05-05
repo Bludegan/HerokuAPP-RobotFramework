@@ -1,19 +1,19 @@
 *** Settings ***
-Library   SeleniumLibrary
+Library         SeleniumLibrary
 
 *** Variables ***
-
-
-*** Test Cases ***
-
+${URL} =        https://the-internet.herokuapp.com/
+${BROWSER} =    chrome
 
 *** Keywords ***
 
 Begin Web Test
     [Documentation]  This is some basic info about the test
-    Set Selenium Speed 	     5s
+    Set Selenium Speed 	     1s
     Open Browser             ${URL}   ${BROWSER}
-    Maximize Browser Window 
+    Maximize Browser Window
+    Wait Until Page Contains  Welcome to the-internet
+
 End Web Test     
     Close Browser
 
