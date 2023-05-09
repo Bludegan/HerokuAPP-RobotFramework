@@ -13,11 +13,6 @@ Open Broken Image Page
 
 Validate that the number images broken are 2
 
-#    ${broken_images} =    Get WebElements    xpath=//*[@id="content"]/div/img
-#    ${num_broken_images} =    Get Length    ${broken_images}
-#    log  ${num_broken_images}
-#    Should Be Equal As Integers    ${num_broken_images}    2
-
     ${broken_images} =    Get Element Attribute     ${IMAGE_1}                        src
     ${loglevel}=    Set Log Level    NONE
     ${background}=  GET    ${broken_images}    expected_status=404

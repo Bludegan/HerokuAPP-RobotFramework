@@ -9,7 +9,7 @@ ${BROWSER} =    chrome
 
 Begin Web Test
     [Documentation]  This is some basic info about the test
-    Set Selenium Speed 	     1s
+    Set Selenium Speed 	     0.5s
     Open Browser             ${URL}   ${BROWSER}
     Maximize Browser Window
     Wait Until Page Contains  Welcome to the-internet

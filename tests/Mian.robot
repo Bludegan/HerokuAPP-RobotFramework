@@ -5,6 +5,15 @@ Resource                ../Resources/PO/Add_Remove_Elements.robot
 Resource                ../Resources/PO/Basic_Auth.robot
 Resource                ../Resources/PO/Broken_Images.robot
 Resource                ../Resources/PO/Checkboxes.robot
+Resource                ../Resources/PO/Context_Menu.robot
+Resource                ../Resources/PO/Drag and Drop.robot
+Resource                ../Resources/PO/Key_Presses.robot
+Resource                ../Resources/PO/Horizontal_Silider.robot
+Resource                ../Resources/PO/File_Download.robot
+Resource                ../Resources/PO/Form_Authentication.robot
+Resource                ../Resources/PO/Floating_Menu.robot
+Resource                ../Resources/PO/Dynamic_Content.robot
+Resource                ../Resources/PO/Dynamic Controls.robot
 Test Setup              Begin Web Test
 Test Teardown           End Web Test
 *** Variables ***
@@ -40,10 +49,119 @@ Basic Auth
 Checkboxes
         [Documentation]    This a test to verify
         [Tags]    Test-4
+        Open Checkboxes Page
         Select the checkbox “Checkbox 1”.
         Validate that the checkbox was checked.
         Select the checkbox “Checkbox 2”.
         Validate that the checkboxes were checked.
+
+Context Menu
+        [Documentation]    This a test to verify
+        [Tags]    Test-5
+         Open Page
+         Right Click on the box
+         Validate the text on the alert is equals to “You selected a context menu”
+         Click on the accept button.
+         Validate that alert was closed.
+
+#Disappearing Elements
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-6
+#        Open Desappearing Elements Page
+#    	enter to this page sometimes the Gallery button is loaded.
+#	    Refresh until the button is visible.
+#	    Validate the Gallery button exists.
+#	    Refresh until the button is not visible.
+#	    Validate the Gallery button does not exist.
+
+Drag and Drop
+        [Documentation]    This a test to verify
+        [Tags]    Test-7
+        Open Drag and Drop Page
+        Drag and drop the box A to the box B
+
+Dynamic Content
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-8
+#        Refresh the page until all the images appears at least on time
+#        Validate the 5 different Image names
+
+Dynamic Controls
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-9
+#        Click on the Remove button
+#        Validate that the checkbox was removed
+#        Click on the Enable button
+#        Validate that input was enabled.
+
+Exit Intent
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-10
+#        Mouse out of the viewport pane and see a modal window appear.
+#        Validate that the modal is displayed.
+
+File Download
+        [Documentation]    This a test to verify
+        [Tags]    Test-11
+        Open File Download
+        Download each file
+        Validate that each file was downloaded.
+
+#File Upload
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-12
+
+
+Floating Menu
+        [Documentation]    This a test to verify
+        [Tags]    Test-13
+        Open Floating Menu Page
+        Scroll to the bottom of the page
+        Validate that ht emenu option are visible
+
+Form Authetication
+        [Documentation]    This a test to verify
+        [Tags]    Test-14
+        Open Form Acthetication Page
+        Enter tomsmith for the username and SuperSecretPassword! for the password
+        CLick on the Login button
+        Validate the login was successful
+        Click on the button Logout
+        Validate that the logout was successful
+        Enter tomsmith1 for the username and SuperSecretPassword! for the password.
+        CLick on the Login button
+        Validate the message “Your username is invalid!”
+        CLick on the Login button
+        Enter tomsmith for the username and SuperS1ecretPassword! for the password.
+        Validate the message “Your password is invalid!”
+
+Horizontal Slider
+        [Documentation]    This a test to verify
+        [Tags]    Test-15
+        Open Horonzontal Slider Page
+        Using the slider, select the number 3.5
+        Validate that the value 3.5 is selected.
+
+#JQuery UI Menus
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-16
+#
+#JavaScript Alert
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-17
+
+Key Presses
+        [Documentation]    This a test to verify
+        [Tags]    Test-18
+        Open Key Presses Page
+        Click on the field and press the key “ESC”
+        Validate that the “You entered: ESCAPE”
+        Click On The Field And Press The Key “BACK_SPACE”
+        Validate the result “You entered: BACK_SPACE”
+
+#Multiple Windows
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-19
 
 *** Keywords ***
 

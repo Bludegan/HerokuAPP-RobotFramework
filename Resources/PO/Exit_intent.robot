@@ -4,7 +4,7 @@ Library             SeleniumLibrary
 *** Variables ***
 
 
-*** Test Cases ***
-
-
 *** Keywords ***
+Mouse out of the viewport pane and see a modal window appear.
+
+Validate that the modal is displayed.

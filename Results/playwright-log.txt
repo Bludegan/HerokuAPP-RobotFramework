@@ -1,0 +1,46 @@
+{"level":30,"time":"2023-05-09T00:31:54.521Z","pid":23696,"hostname":"PCPSE0202","msg":"Listening on 56599"}
+{"level":30,"time":"2023-05-09T00:31:54.625Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-09T00:31:54.625Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-09T00:31:54.628Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-09T00:31:54.629Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-09T00:31:54.633Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-05-09T00:31:55.086Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-05-09T00:31:55.090Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-05-09T00:31:55.090Z","pid":23696,"hostname":"PCPSE0202","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-05-09T00:31:55.100Z","pid":23696,"hostname":"PCPSE0202","msg":"Changed active context"}
+{"level":30,"time":"2023-05-09T00:31:55.241Z","pid":23696,"hostname":"PCPSE0202","msg":"Video path: undefined"}
+{"level":30,"time":"2023-05-09T00:31:55.241Z","pid":23696,"hostname":"PCPSE0202","msg":"Changed active page"}
+{"level":30,"time":"2023-05-09T00:31:56.406Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method newPage"}
+{"level":30,"time":"2023-05-09T00:31:56.414Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-05-09T00:31:56.418Z","pid":23696,"hostname":"PCPSE0202","msg":"Removed page=b2e70afc-ab20-41e8-8186-26b12b34f525 from context=bbb1eee9-39b1-41ed-a70f-76d8530dd333 page stack"}
+{"level":30,"time":"2023-05-09T00:31:56.444Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-05-09T00:31:56.449Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-09T00:31:56.450Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:9952:59)
+    at PlaywrightServer.setTimeout (C:\Python311\Lib\site-packages\Browser\wrapper\index.js:10197:69)
+    at C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-05-09T00:31:56.454Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-09T00:31:56.454Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-09T00:31:56.499Z","pid":23696,"hostname":"PCPSE0202","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-05-09T00:31:56.499Z","pid":23696,"hostname":"PCPSE0202","msg":"End of node method closeAllBrowsers"}

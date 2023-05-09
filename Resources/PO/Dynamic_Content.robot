@@ -4,7 +4,8 @@ Library             SeleniumLibrary
 *** Variables ***
 
 
-*** Test Cases ***
-
-
 *** Keywords ***
+Refresh the page until all the images appears at least on time
+
+Validate the 5 different Image names
+
