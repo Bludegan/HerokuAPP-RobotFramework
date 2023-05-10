@@ -16,12 +16,8 @@ Begin Web Test
     ${path}  Normalize Path     ${full}
 
     ${prefs} =  Create Dictionary   download.default_directory=${path}   download.prompt_for_download=${FALSE}  download.directory_upgrade=${TRUE}
-
-    Set Selenium Speed 	     2s
-    FOR    ${i}    IN RANGE    30
+    Set Selenium Speed 	     0.5s
     Open Browser             ${URL}   ${BROWSER}        options=add_experimental_option("prefs",${prefs})
-    Close Window
-    END
     Maximize Browser Window
     Wait Until Page Contains  Welcome to the-internet
 

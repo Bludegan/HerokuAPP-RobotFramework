@@ -83,34 +83,39 @@ Drag and Drop
         [Tags]    Test-7
         Open Drag and Drop Page
         Drag and drop the box A to the box B
+        Validate That The Boxes Were Changed A.
+        Drag and drop the box B to the box A
+        Validate That The Boxes Were Changed B.
 
-Dynamic Content
+#Dynamic Content
 #        [Documentation]    This a test to verify
 #        [Tags]    Test-8
 #        Refresh the page until all the images appears at least on time
 #        Validate the 5 different Image names
 
 Dynamic Controls
-#        [Documentation]    This a test to verify
-#        [Tags]    Test-9
-#        Click on the Remove button
-#        Validate that the checkbox was removed
-#        Click on the Enable button
-#        Validate that input was enabled.
+        [Documentation]    This a test to verify
+        [Tags]    Test-9
+        Open Dynamic Control Page
+        Click on the Remove button
+        Validate that the checkbox was removed
+        Click on the Enable button
+        Validate that input was enabled.
 
 Exit Intent
         [Documentation]    This a test to verify
         [Tags]    Test-10
          Open Exit Intent Page
          Mouse out of the viewport pane and see a modal window appear.
-#        Validate that the modal is displayed.
+         Validate that the modal is displayed.
 
-File Download
-        [Documentation]    This a test to verify
-        [Tags]    Test-11
-        Open File Download
-        Download each file
-        Validate that each file was downloaded.
+#File Download
+#        [Documentation]    This a test to verify
+#        [Tags]    Test-11
+#        Open File Download
+#        Download each file
+#        Validate that each file was downloaded.
+
 
 #File Upload
 #        [Documentation]    This a test to verify
