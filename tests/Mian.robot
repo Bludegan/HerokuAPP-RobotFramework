@@ -14,6 +14,10 @@ Resource                ../Resources/PO/Form_Authentication.robot
 Resource                ../Resources/PO/Floating_Menu.robot
 Resource                ../Resources/PO/Dynamic_Content.robot
 Resource                ../Resources/PO/Dynamic Controls.robot
+Resource                ../Resources/PO/Exit_intent.robot
+Resource                ../Resources/PO/JQuery_UI_Menus.robot
+Resource                ../Resources/PO/Multiple_Windows.robot
+Resource                ../Resources/PO/JavaScript_Alert.robot
 Test Setup              Begin Web Test
 Test Teardown           End Web Test
 *** Variables ***
@@ -95,9 +99,10 @@ Dynamic Controls
 #        Validate that input was enabled.
 
 Exit Intent
-#        [Documentation]    This a test to verify
-#        [Tags]    Test-10
-#        Mouse out of the viewport pane and see a modal window appear.
+        [Documentation]    This a test to verify
+        [Tags]    Test-10
+         Open Exit Intent Page
+         Mouse out of the viewport pane and see a modal window appear.
 #        Validate that the modal is displayed.
 
 File Download
@@ -142,14 +147,25 @@ Horizontal Slider
         Using the slider, select the number 3.5
         Validate that the value 3.5 is selected.
 
-#JQuery UI Menus
-#        [Documentation]    This a test to verify
-#        [Tags]    Test-16
-#
-#JavaScript Alert
-#        [Documentation]    This a test to verify
-#        [Tags]    Test-17
+JQuery UI Menus
+        [Documentation]    This a test to verify
+        [Tags]    Test-16
+        Open JQueryUI - Menu Page
+        Click on the Enabled option
+        Click on the Downloads
+        Click on the Excel Options
+        Validate that the excel file was downloaded
 
+JavaScript Alert
+        [Documentation]   This test case verifies that the user is able to input text, Accept/Dismiss a JS Confirm and also verify its text
+        [Tags]    Test-17
+        Open JavaScript Alerts
+        Click on the button “Click For JS Alert”
+        Click on the Accept button
+        Validate the result “You successfuly clicked an alert”
+        Click on the button “Click for JS Prompt”
+        Fill the text “testing”
+        Validate the result You entered: "testgin”
 Key Presses
         [Documentation]    This a test to verify
         [Tags]    Test-18
@@ -159,10 +175,12 @@ Key Presses
         Click On The Field And Press The Key “BACK_SPACE”
         Validate the result “You entered: BACK_SPACE”
 
-#Multiple Windows
-#        [Documentation]    This a test to verify
-#        [Tags]    Test-19
-
+Multiple Windows
+        [Documentation]    This a test to verify
+        [Tags]    Test-19
+        Open Multiple Windows Page
+        Click on the link “Click Here”
+        Validate the text displayed on the new page.
 *** Keywords ***
 
 

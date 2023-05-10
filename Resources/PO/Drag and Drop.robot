@@ -27,3 +27,6 @@ Drag and drop the box A to the box B
 #Validate that the boxes were changed.
 #    Element Text Should Be    ${B_ELEMENT}    Drag me to my target
 
+    mouse down         xpath=//*[@id="column-a"]
+    mouse up            xpath=//*[@id="column-a"]
+    drag and drop       xpath=//*[@id="column-a"]         xpath=//*[@id="column-b"]
