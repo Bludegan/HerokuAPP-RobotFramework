@@ -9,15 +9,18 @@ Resource                ../Resources/PO/Context_Menu.robot
 Resource                ../Resources/PO/Drag and Drop.robot
 Resource                ../Resources/PO/Key_Presses.robot
 Resource                ../Resources/PO/Horizontal_Silider.robot
-Resource                ../Resources/PO/File_Download.robot
+Resource                ../Resources/PO/File Upload.robot
 Resource                ../Resources/PO/Form_Authentication.robot
 Resource                ../Resources/PO/Floating_Menu.robot
-Resource                ../Resources/PO/Dynamic_Content.robot
 Resource                ../Resources/PO/Dynamic Controls.robot
 Resource                ../Resources/PO/Exit_intent.robot
 Resource                ../Resources/PO/JQuery_UI_Menus.robot
 Resource                ../Resources/PO/Multiple_Windows.robot
 Resource                ../Resources/PO/JavaScript_Alert.robot
+Resource                ../Resources/PO/Disappearing_Elements.robot
+Resource                ../Resources/PO/Dynamic_Content.robot
+Resource                ../Resources/PO/File_Download.robot
+
 Test Setup              Begin Web Test
 Test Teardown           End Web Test
 *** Variables ***
@@ -68,11 +71,11 @@ Context Menu
          Click on the accept button.
          Validate that alert was closed.
 
-#Disappearing Elements
-#        [Documentation]    This a test to verify
-#        [Tags]    Test-6
-#        Open Desappearing Elements Page
-#    	enter to this page sometimes the Gallery button is loaded.
+Disappearing Elements
+        [Documentation]    This a test to verify
+        [Tags]    Test-6
+        Open Desappearing Elements Page
+    	Enter to this page sometimes the Gallery button is loaded.
 #	    Refresh until the button is visible.
 #	    Validate the Gallery button exists.
 #	    Refresh until the button is not visible.
@@ -117,10 +120,12 @@ Exit Intent
 #        Validate that each file was downloaded.
 
 
-#File Upload
-#        [Documentation]    This a test to verify
-#        [Tags]    Test-12
-
+File Upload
+        [Documentation]    This a test to verify
+        [Tags]    Test-12
+        Open File Upload Page
+        Create the file test.txt with “testing” as text.
+        Upload the file test.txt
 
 Floating Menu
         [Documentation]    This a test to verify

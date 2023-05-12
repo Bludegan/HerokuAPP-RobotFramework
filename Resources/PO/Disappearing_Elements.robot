@@ -18,9 +18,9 @@ Enter to this page sometimes the Gallery button is loaded.
         FOR    ${i}    IN RANGE    0        30
         Sleep       0.5
         RELOAD PAGE
-#    ${document_number}=   SeleniumLibrary.Get Element Count   ${BUTTON_GALLERY}
-#    LOG     Number of documents: ${document_number}
-#    Log     ${i}      WARN
+#   ${document_number}=   SeleniumLibrary.Get Element Count   ${BUTTON_GALLERY}
+#   LOG     Number of documents: ${document_number}
+#   Log     ${i}      WARN
         END
     END
 
