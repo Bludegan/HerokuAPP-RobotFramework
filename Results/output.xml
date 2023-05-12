@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230512 11:34:44.444" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230512 11:47:31.046" rpa="false" schemaversion="3">
 <suite id="s1" name="Tests" source="C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\tests">
 <suite id="s1-s1" name="Mian" source="C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\tests\Mian.robot">
-<test id="s1-s1-t1" name="Disappearing Elements" line="74">
+<test id="s1-s1-t1" name="File Upload" line="123">
 <kw name="Begin Web Test" library="Common" type="SETUP">
 <doc>This is some basic info about the test</doc>
 <kw name="Set Variable" library="BuiltIn">
 <var>${full}</var>
 <arg>${EXECDIR}${/}downloads${/}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230512 11:34:45.001" level="INFO">${full} = C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\downloads\</msg>
-<status status="PASS" starttime="20230512 11:34:45.001" endtime="20230512 11:34:45.001"/>
+<msg timestamp="20230512 11:47:31.573" level="INFO">${full} = C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\downloads\</msg>
+<status status="PASS" starttime="20230512 11:47:31.573" endtime="20230512 11:47:31.573"/>
 </kw>
 <kw name="Normalize Path" library="OperatingSystem">
 <var>${path}</var>
 <arg>${full}</arg>
 <doc>Normalizes the given path.</doc>
-<msg timestamp="20230512 11:34:45.002" level="INFO">${path} = C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\downloads</msg>
-<status status="PASS" starttime="20230512 11:34:45.001" endtime="20230512 11:34:45.002"/>
+<msg timestamp="20230512 11:47:31.573" level="INFO">${path} = C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\downloads</msg>
+<status status="PASS" starttime="20230512 11:47:31.573" endtime="20230512 11:47:31.573"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${prefs}</var>
@@ -25,515 +25,97 @@
 <arg>download.prompt_for_download=${FALSE}</arg>
 <arg>download.directory_upgrade=${TRUE}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230512 11:34:45.002" level="INFO">${prefs} = {'download.default_directory': 'C:\\Users\\aflores\\Desktop\\Robot FrameWork\\FInal-Excercise\\downloads', 'download.prompt_for_download': False, 'download.directory_upgrade': True}</msg>
-<status status="PASS" starttime="20230512 11:34:45.002" endtime="20230512 11:34:45.002"/>
+<msg timestamp="20230512 11:47:31.574" level="INFO">${prefs} = {'download.default_directory': 'C:\\Users\\aflores\\Desktop\\Robot FrameWork\\FInal-Excercise\\downloads', 'download.prompt_for_download': False, 'download.directory_upgrade': True}</msg>
+<status status="PASS" starttime="20230512 11:47:31.574" endtime="20230512 11:47:31.574"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230512 11:34:45.002" endtime="20230512 11:34:45.002"/>
+<status status="PASS" starttime="20230512 11:47:31.574" endtime="20230512 11:47:31.574"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=add_experimental_option("prefs",${prefs})</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230512 11:34:45.003" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/'.</msg>
-<msg timestamp="20230512 11:34:45.025" level="INFO">Executing: C:\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
-<status status="PASS" starttime="20230512 11:34:45.002" endtime="20230512 11:34:49.099"/>
+<msg timestamp="20230512 11:47:31.575" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/'.</msg>
+<msg timestamp="20230512 11:47:31.599" level="INFO">Executing: C:\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230512 11:47:31.574" endtime="20230512 11:47:34.866"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230512 11:34:49.099" endtime="20230512 11:34:49.721"/>
+<status status="PASS" starttime="20230512 11:47:34.866" endtime="20230512 11:47:35.482"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Welcome to the-internet</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20230512 11:34:49.721" endtime="20230512 11:34:50.262"/>
+<status status="PASS" starttime="20230512 11:47:35.482" endtime="20230512 11:47:35.995"/>
 </kw>
-<status status="PASS" starttime="20230512 11:34:45.001" endtime="20230512 11:34:50.262"/>
+<status status="PASS" starttime="20230512 11:47:31.573" endtime="20230512 11:47:35.995"/>
 </kw>
-<kw name="Open Desappearing Elements Page" library="Disappearing_Elements">
+<kw name="Open File Upload Page" library="File Upload">
 <kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath=//*[@id="content"]/ul/li[9]/a</arg>
+<arg>xpath=//*[@id="content"]/ul/li[18]/a</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230512 11:34:50.263" level="INFO">Clicking link 'xpath=//*[@id="content"]/ul/li[9]/a'.</msg>
-<status status="PASS" starttime="20230512 11:34:50.263" endtime="20230512 11:34:51.968"/>
+<msg timestamp="20230512 11:47:35.996" level="INFO">Clicking link 'xpath=//*[@id="content"]/ul/li[18]/a'.</msg>
+<status status="PASS" starttime="20230512 11:47:35.996" endtime="20230512 11:47:38.013"/>
 </kw>
-<status status="PASS" starttime="20230512 11:34:50.262" endtime="20230512 11:34:51.968"/>
+<status status="PASS" starttime="20230512 11:47:35.995" endtime="20230512 11:47:38.013"/>
 </kw>
-<kw name="Enter to this page sometimes the Gallery button is loaded." library="Disappearing_Elements">
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${document_number}</var>
-<arg>${BUTTON_GALLERY}</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20230512 11:34:52.481" level="INFO">${document_number} = 0</msg>
-<status status="PASS" starttime="20230512 11:34:51.969" endtime="20230512 11:34:52.481"/>
+<kw name="Create the file test.txt with “testing” as text." library="File Upload">
+<kw name="Create File" library="OperatingSystem">
+<arg>${EXECDIR}${/}downloads${/}test.txt</arg>
+<arg>content=testing</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20230512 11:47:38.014" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\downloads\test.txt"&gt;C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\downloads\test.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230512 11:47:38.014" endtime="20230512 11:47:38.014"/>
 </kw>
-<if>
-<branch type="IF" condition="${document_number} == 1">
-<kw name="Log" library="BuiltIn">
-<arg>Number of documents: ${document_number}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230512 11:34:52.481" endtime="20230512 11:34:52.481"/>
+<status status="PASS" starttime="20230512 11:47:38.013" endtime="20230512 11:47:38.014"/>
 </kw>
-<status status="NOT RUN" starttime="20230512 11:34:52.481" endtime="20230512 11:34:52.481"/>
-</branch>
-<branch type="ELSE IF" condition="${document_number} == 0">
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>0</value>
-<value>30</value>
-<iter>
-<var name="${i}">0</var>
+<kw name="Upload the file test.txt" library="File Upload">
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>xpath=//*[@id="file-upload"]</arg>
+<arg>${EXECDIR}${/}downloads${/}test.txt</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230512 11:47:38.015" level="INFO">Sending C:\Users\aflores\Desktop\Robot FrameWork\FInal-Excercise\downloads\test.txt to browser.</msg>
+<status status="PASS" starttime="20230512 11:47:38.015" endtime="20230512 11:47:39.056"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="file-submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230512 11:47:39.056" level="INFO">Clicking element 'xpath=//*[@id="file-submit"]'.</msg>
+<status status="PASS" starttime="20230512 11:47:39.056" endtime="20230512 11:47:40.231"/>
+</kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:34:52.981" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:34:52.481" endtime="20230512 11:34:52.981"/>
+<msg timestamp="20230512 11:47:42.232" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230512 11:47:40.231" endtime="20230512 11:47:42.232"/>
 </kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:34:52.981" endtime="20230512 11:34:53.604"/>
-</kw>
-<status status="PASS" starttime="20230512 11:34:52.481" endtime="20230512 11:34:53.604"/>
-</iter>
-<iter>
-<var name="${i}">1</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:34:54.105" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:34:53.604" endtime="20230512 11:34:54.105"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:34:54.105" endtime="20230512 11:34:54.734"/>
-</kw>
-<status status="PASS" starttime="20230512 11:34:53.604" endtime="20230512 11:34:54.734"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:34:55.234" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:34:54.734" endtime="20230512 11:34:55.234"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:34:55.234" endtime="20230512 11:34:55.879"/>
-</kw>
-<status status="PASS" starttime="20230512 11:34:54.734" endtime="20230512 11:34:55.879"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:34:56.380" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:34:55.879" endtime="20230512 11:34:56.380"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:34:56.380" endtime="20230512 11:34:57.037"/>
-</kw>
-<status status="PASS" starttime="20230512 11:34:55.879" endtime="20230512 11:34:57.037"/>
-</iter>
-<iter>
-<var name="${i}">4</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:34:57.539" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:34:57.038" endtime="20230512 11:34:57.539"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:34:57.540" endtime="20230512 11:34:58.200"/>
-</kw>
-<status status="PASS" starttime="20230512 11:34:57.037" endtime="20230512 11:34:58.200"/>
-</iter>
-<iter>
-<var name="${i}">5</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:34:58.702" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:34:58.201" endtime="20230512 11:34:58.702"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:34:58.702" endtime="20230512 11:34:59.369"/>
-</kw>
-<status status="PASS" starttime="20230512 11:34:58.200" endtime="20230512 11:34:59.369"/>
-</iter>
-<iter>
-<var name="${i}">6</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:34:59.871" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:34:59.369" endtime="20230512 11:34:59.871"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:34:59.872" endtime="20230512 11:35:00.520"/>
-</kw>
-<status status="PASS" starttime="20230512 11:34:59.369" endtime="20230512 11:35:00.520"/>
-</iter>
-<iter>
-<var name="${i}">7</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:01.022" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:00.520" endtime="20230512 11:35:01.022"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:01.023" endtime="20230512 11:35:01.653"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:00.520" endtime="20230512 11:35:01.653"/>
-</iter>
-<iter>
-<var name="${i}">8</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:02.153" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:01.653" endtime="20230512 11:35:02.153"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:02.153" endtime="20230512 11:35:02.786"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:01.653" endtime="20230512 11:35:02.786"/>
-</iter>
-<iter>
-<var name="${i}">9</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:03.288" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:02.787" endtime="20230512 11:35:03.288"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:03.288" endtime="20230512 11:35:03.940"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:02.786" endtime="20230512 11:35:03.940"/>
-</iter>
-<iter>
-<var name="${i}">10</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:04.442" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:03.940" endtime="20230512 11:35:04.442"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:04.442" endtime="20230512 11:35:05.070"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:03.940" endtime="20230512 11:35:05.070"/>
-</iter>
-<iter>
-<var name="${i}">11</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:05.570" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:05.070" endtime="20230512 11:35:05.570"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:05.570" endtime="20230512 11:35:06.220"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:05.070" endtime="20230512 11:35:06.220"/>
-</iter>
-<iter>
-<var name="${i}">12</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:06.720" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:06.220" endtime="20230512 11:35:06.720"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:06.720" endtime="20230512 11:35:07.358"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:06.220" endtime="20230512 11:35:07.358"/>
-</iter>
-<iter>
-<var name="${i}">13</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:07.859" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:07.358" endtime="20230512 11:35:07.859"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:07.859" endtime="20230512 11:35:08.486"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:07.358" endtime="20230512 11:35:08.486"/>
-</iter>
-<iter>
-<var name="${i}">14</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:08.987" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:08.486" endtime="20230512 11:35:08.987"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:08.988" endtime="20230512 11:35:09.637"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:08.486" endtime="20230512 11:35:09.637"/>
-</iter>
-<iter>
-<var name="${i}">15</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:10.138" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:09.638" endtime="20230512 11:35:10.138"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:10.139" endtime="20230512 11:35:10.785"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:09.637" endtime="20230512 11:35:10.785"/>
-</iter>
-<iter>
-<var name="${i}">16</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:11.286" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:10.786" endtime="20230512 11:35:11.286"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:11.287" endtime="20230512 11:35:11.917"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:10.785" endtime="20230512 11:35:11.917"/>
-</iter>
-<iter>
-<var name="${i}">17</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:12.417" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:11.917" endtime="20230512 11:35:12.417"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:12.418" endtime="20230512 11:35:13.056"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:11.917" endtime="20230512 11:35:13.056"/>
-</iter>
-<iter>
-<var name="${i}">18</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:13.556" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:13.056" endtime="20230512 11:35:13.556"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:13.557" endtime="20230512 11:35:14.205"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:13.056" endtime="20230512 11:35:14.205"/>
-</iter>
-<iter>
-<var name="${i}">19</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:14.707" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:14.206" endtime="20230512 11:35:14.707"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:14.708" endtime="20230512 11:35:15.350"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:14.206" endtime="20230512 11:35:15.350"/>
-</iter>
-<iter>
-<var name="${i}">20</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:15.852" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:15.351" endtime="20230512 11:35:15.852"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:15.853" endtime="20230512 11:35:16.484"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:15.350" endtime="20230512 11:35:16.484"/>
-</iter>
-<iter>
-<var name="${i}">21</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:16.986" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:16.485" endtime="20230512 11:35:16.986"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:16.986" endtime="20230512 11:35:17.651"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:16.484" endtime="20230512 11:35:17.651"/>
-</iter>
-<iter>
-<var name="${i}">22</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:18.153" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:17.651" endtime="20230512 11:35:18.153"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:18.153" endtime="20230512 11:35:18.788"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:17.651" endtime="20230512 11:35:18.788"/>
-</iter>
-<iter>
-<var name="${i}">23</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:19.289" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:18.789" endtime="20230512 11:35:19.289"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:19.291" endtime="20230512 11:35:19.951"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:18.788" endtime="20230512 11:35:19.951"/>
-</iter>
-<iter>
-<var name="${i}">24</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:20.452" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:19.951" endtime="20230512 11:35:20.452"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:20.453" endtime="20230512 11:35:21.103"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:19.951" endtime="20230512 11:35:21.103"/>
-</iter>
-<iter>
-<var name="${i}">25</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:21.606" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:21.104" endtime="20230512 11:35:21.606"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:21.606" endtime="20230512 11:35:22.255"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:21.104" endtime="20230512 11:35:22.255"/>
-</iter>
-<iter>
-<var name="${i}">26</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:22.757" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:22.256" endtime="20230512 11:35:22.757"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:22.758" endtime="20230512 11:35:23.389"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:22.256" endtime="20230512 11:35:23.389"/>
-</iter>
-<iter>
-<var name="${i}">27</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:23.890" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:23.389" endtime="20230512 11:35:23.890"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:23.891" endtime="20230512 11:35:24.523"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:23.389" endtime="20230512 11:35:24.523"/>
-</iter>
-<iter>
-<var name="${i}">28</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:25.026" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:24.525" endtime="20230512 11:35:25.026"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:25.026" endtime="20230512 11:35:25.672"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:24.523" endtime="20230512 11:35:25.672"/>
-</iter>
-<iter>
-<var name="${i}">29</var>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 11:35:26.174" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20230512 11:35:25.672" endtime="20230512 11:35:26.174"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230512 11:35:26.174" endtime="20230512 11:35:26.804"/>
-</kw>
-<status status="PASS" starttime="20230512 11:35:25.672" endtime="20230512 11:35:26.804"/>
-</iter>
-<status status="PASS" starttime="20230512 11:34:52.481" endtime="20230512 11:35:26.804"/>
-</for>
-<status status="PASS" starttime="20230512 11:34:52.481" endtime="20230512 11:35:26.804"/>
-</branch>
-<status status="PASS" starttime="20230512 11:34:52.481" endtime="20230512 11:35:26.804"/>
-</if>
-<status status="PASS" starttime="20230512 11:34:51.968" endtime="20230512 11:35:26.804"/>
+<status status="PASS" starttime="20230512 11:47:38.015" endtime="20230512 11:47:42.232"/>
 </kw>
 <kw name="End Web Test" library="Common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230512 11:35:26.805" endtime="20230512 11:35:29.449"/>
+<status status="PASS" starttime="20230512 11:47:42.233" endtime="20230512 11:47:44.922"/>
 </kw>
-<status status="PASS" starttime="20230512 11:35:26.804" endtime="20230512 11:35:29.449"/>
+<status status="PASS" starttime="20230512 11:47:42.233" endtime="20230512 11:47:44.922"/>
 </kw>
 <doc>This a test to verify</doc>
-<tag>Test-6</tag>
-<status status="PASS" starttime="20230512 11:34:44.999" endtime="20230512 11:35:29.450"/>
+<tag>Test-12</tag>
+<status status="PASS" starttime="20230512 11:47:31.572" endtime="20230512 11:47:44.922"/>
 </test>
 <doc>This is a final excercise in the Robot Framework</doc>
-<status status="PASS" starttime="20230512 11:34:44.468" endtime="20230512 11:35:29.454"/>
+<status status="PASS" starttime="20230512 11:47:31.069" endtime="20230512 11:47:44.924"/>
 </suite>
-<status status="PASS" starttime="20230512 11:34:44.446" endtime="20230512 11:35:29.459"/>
+<status status="PASS" starttime="20230512 11:47:31.048" endtime="20230512 11:47:44.926"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Test-6</stat>
+<stat pass="1" fail="0" skip="0">Test-12</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
